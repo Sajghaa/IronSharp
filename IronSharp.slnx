@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Fundamentals/">
+    <Project Path="src/Fundamentals/IronSharp.Fundamentals.Console/IronSharp.Fundamentals.Console.csproj" />
+  </Folder>
+  <Folder Name="/src/OOP/">
+    <Project Path="src/OOP/IronSharp.OOP.Core/IronSharp.OOP.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/Fundamentals/">
+    <Project Path="tests/Fundamentals/IronSharp.Fundamentals.Tests/IronSharp.Fundamentals.Tests.csproj" />
+  </Folder>
+</Solution>
