@@ -1,32 +1,27 @@
-﻿Console.WriteLine("Iron is officially forged");
+﻿using IronSharp.OOP.Core; 
 
-int age = 30;
-double pi =  3.14159;
-string name = "Alex";
-bool isLearning = true;
+int sum = Calculator.Add(10, 20);
+Console.WriteLine($"Addition: {sum}");
 
-var year = 2026;
+int totalAll = Calculator.SumAll(1, 2, 3, 4, 5);
+Console.WriteLine($"SumAll (varargs): {totalAll}");
 
-Console.WriteLine($"Hello {name}, you are {age} years old");
-Console.WriteLine($"We are in {year} and Pi is {pi} ");
+string formatted = Calculator.FormatResult(100); 
+Console.WriteLine(formatted);
 
-if (age >= 18)
+string formattedCustom = Calculator.FormatResult(100, "Total: ");
+Console.WriteLine(formattedCustom);
+
+bool success = Calculator.TryDivide(10, 3, out int divisionResult);
+if (success)
 {
-    Console.WriteLine($"{name} is an adult.");
+    Console.WriteLine($"Division result: {divisionResult}");
 }
 else
 {
-    Console.WriteLine($"{name} is a minor");
+    Console.WriteLine("Cannot divide by zero!");
 }
 
-string weather = "Sunny";
-string action = weather switch
-{
-    "Sunny" => "Go outside",
-    "Rainy" => "Take an umbrella",
-    "Cloudy" => "Bring a jacket",
-    _=> "Check the forecast"    
-};
-
-Console.WriteLine($"Weather advice: {action}");
-
+Greeter myGreeter = new Greeter("Good evening");
+Console.WriteLine(myGreeter.SayHello("Alice"));
+Console.WriteLine(myGreeter.SayHello("Bob", "Mr."));
